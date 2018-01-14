@@ -106,7 +106,7 @@ func (s *service) List(context.Context, *books.Empty) (*books.Empty, error){
 	return &books.Empty{}, status.Error(codes.Unimplemented, "The server does not implement this method")
 }
 ```
-Run `go run server.go` and from another terminal tab run `go run client.go`. The error we receive now is ``rpc error: code = Unimplemented desc = The server does not implement this method``.
+Run `go run server.go` and from another terminal tab run `go run client.go watch`. The error we receive now is ``rpc error: code = Unimplemented desc = The server does not implement this method``.
 This means we created a gRPC connection :) We just need to fix the List method.
 
 Edit the files as following:
